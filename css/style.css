@@ -1,275 +1,419 @@
-html, body {
-    background-color: black;
+html,
+body
+{
     font-family: 'Open Sans', sans-serif;
     font-size: small;
-    color: #78829d;
-    margin: 0px;
-    padding: 0;
+
     height: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: #78829d;
+    background-color: black;
 }
 
-textarea:focus, input:focus{
+textarea:focus,
+input:focus
+{
     outline: 0;
 }
 
-.header {
-    background-color: black;
-    color: white;
-    text-align: center;
+.header
+{
     padding: 5px;
+
+    text-align: center;
+
+    color: white;
+    background-color: black;
 }
 
-.aside {
+.aside
+{
     line-height: 30px;
-    background: #1f2637;
-    height: 100%;
-    width: 200px;
-    float: left;
-    padding: 0;
+
     position: fixed;
+
+    float: left;
+
+    width: 200px;
+    height: 100%;
+    padding: 0;
+
+    background: #1f2637;
 }
 
-.aside .nav {
-    padding-left: 0;
+.aside .nav
+{
     margin-top: 10px;
     margin-bottom: 0;
+    padding-left: 0;
 }
 
-.aside .logo .logo-image {
+.aside .logo .logo-image
+{
     display: block;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 68px;
+
     width: 57px;
-    background-image: url("logo.png");
+    height: 68px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-image: url('../img/logo.png');
     background-repeat: no-repeat;
+
+    transition-duration: 0.2s;
 }
 
-.logo-text {
-    text-align: center;
-    color: white;
-    font-size: medium;
-    margin: 11px;
+.aside .logo .logo-image:hover
+{
+    transition-duration: 0.2s;
+
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
-.aside .nav a {
+
+.logo-text
+{
+    font-size: medium;
+
+    margin: 11px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.aside .nav a
+{
     float: left;
-    text-decoration: none;
-    color: #78829d;
-    padding-right: 0px;
+
     width: 200px;
     margin-bottom: 10px;
+    padding-right: 0;
+
+    text-decoration: none;
+
+    color: #78829d;
+
+    transition-duration: 0.7s;
 }
 
-.aside .nav a i {
-    padding-right: 10px;
-    padding-left: 20px;
-}
+    .aside .nav a i
+    {
+        margin-right: 10px;
+        margin-left: 20px;
+    }
 
+    .aside .nav a:hover i
+    {
 
-.aside .nav a:hover {
-    background-color: black;
+        color: white;
+        background-color: black;
+
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+
+        transition-duration: 0.7s;
+    }
+
+.aside .nav a:hover
+{
     color: white;
+    background-color: black;
+
+    margin-left: 20px;
+
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+
+    transition-duration: 0.7s;
 }
 
-.section {
-    background-color: black;
-    float: left;
-    padding: 6px 0 4px 4px;
-    padding-bottom: 45px;
+.section
+{
     position: absolute;
     left: 204px;
+
+    float: left;
+
     width: calc(100% - 212px);
+    padding: 6px 0 4px 4px;
+    padding-bottom: 45px;
+
+    background-color: black;
 }
 
-.section .image {
+.section .image
+{
+    display: block;
+    float: left;
+
+    height: 0;
     margin-right: 4px;
     padding-right: 0;
-    float: left;
-    height: 0;
-    display: block;
-    background-image: url("img01.png");
-    background-size: 100%;
+
+    background-image: url('../img/img01.png');
     background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-@media only screen and (max-width: 510px) {
-    .section .image {
-        padding-bottom: 100%;
+@media only screen and (max-width: 510px)
+{
+    .section .image
+    {
         width: calc(100% - 4px);
+        padding-bottom: 100%;
+
+        transition-duration: 1s;
     }
 }
-@media only screen and (min-width: 511px) and (max-width: 760px) {
-    .section .image {
-        padding-bottom: 50%;
+@media only screen and (min-width: 511px) and (max-width: 760px)
+{
+    .section .image
+    {
         width: calc(50% - 4px);
+        padding-bottom: 50%;
+
+        transition-duration: 1s;
     }
 }
-@media only screen and (min-width: 761px) and (max-width: 1010px) {
-    .section .image {
-        padding-bottom: 33.33%;
+@media only screen and (min-width: 761px) and (max-width: 1010px)
+{
+    .section .image
+    {
         width: calc(33.33% - 4px);
+        padding-bottom: 33.33%;
+
+        transition-duration: 1s;
     }
 }
-@media only screen and (min-width: 1011px) and (max-width: 1260px) {
-    .section .image {
-        padding-bottom: 25%;
+@media only screen and (min-width: 1011px) and (max-width: 1260px)
+{
+    .section .image
+    {
         width: calc(25% - 4px);
+        padding-bottom: 25%;
+
+        transition-duration: 1s;
     }
 }
-@media only screen and (min-width: 1261px) and (max-width: 1510px) {
-    .section .image {
-        padding-bottom: 20%;
+@media only screen and (min-width: 1261px) and (max-width: 1510px)
+{
+    .section .image
+    {
         width: calc(20% - 4px);
+        padding-bottom: 20%;
+
+        transition-duration: 1s;
     }
 }
-@media only screen and (min-width: 1511px) and (max-width: 1760px) {
-    .section .image {
-        padding-bottom: 16.66%;
+@media only screen and (min-width: 1511px) and (max-width: 1760px)
+{
+    .section .image
+    {
         width: calc(16.66% - 4px);
+        padding-bottom: 16.66%;
+
+        transition-duration: 1s;
     }
 }
-@media only screen and (min-width: 1761px) {
-    .section .image {
-        padding-bottom: 14.28%;
+@media only screen and (min-width: 1761px)
+{
+    .section .image
+    {
         width: calc(14.28% - 4px);
+        max-width: 270px;
+        padding-bottom: 14.28%;
+
+        transition-duration: 1s;
     }
 }
 
-.footer {
+.footer
+{
     position: fixed;
     bottom: 0;
-    width: 100%;
-    background-color:#181e2c;
-    height: 46px;
-    color: black;
+
     clear: both;
+
+    width: 100%;
+    height: 46px;
+    padding: 0;
+
     text-align: center;
-    padding: 0px;
+
+    color: black;
+    background-color: #181e2c;
 }
 
 
-.footer .footer-items {
+.footer .footer-items
+{
     position: relative;
 }
 
-.footer ul.footer-items {
-    margin-top: 0px;
-    margin-bottom: 0px;
+.footer ul.footer-items
+{
     height: 46px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.footer .a-question-circle, .a-cog {
-    float: right;
-    padding: 0px 20px 0px 20px;
-    background-color: #1f2637;
-    text-decoration: none;
-    height: 46px;
-    line-height: 46px;
+.footer .a-question-circle,
+.a-cog
+{
     font-size: medium;
+    line-height: 46px;
+
+    float: right;
+
+    height: 46px;
+    padding: 0 20px 0 20px;
+
+    text-decoration: none;
+
+    background-color: #1f2637;
 }
 
-.footer .a-question-circle:link, .footer .a-cog:link {
+.footer .a-question-circle:link,
+.footer .a-cog:link
+{
     color: white;
 }
 
-.footer .a-question-circle:visited, .footer .a-cog:visited {
+.footer .a-question-circle:visited,
+.footer .a-cog:visited
+{
     color: white;
 }
 
-.footer .a-cog {
+.footer .a-cog
+{
     background-color: #38ada4;
 }
 
-.aside .nav-split-line {
+.aside .nav-split-line
+{
     clear: both;
+
     width: 200px;
     height: 4px;
-    background-color: #19202e;
+
+    border-top-width: 2px;
     border-top-style: solid;
     border-top-color: #141824;
-    border-top-width: 2px;
+    border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: #282f41;
-    border-bottom-width: 2px;
+    background-color: #19202e;
 }
 
-.aside .radio-switch {
+.aside .radio-switch
+{
     clear: both;
+
     margin-bottom: 14px;
 }
 
-.aside #tags-radio {
+.aside #tags-radio
+{
+    margin-bottom: 14px;
     margin-left: 20px;
-    margin-bottom: 14px;
 }
 
-.aside #users-radio {
+.aside #users-radio
+{
+    margin-bottom: 14px;
     margin-left: 30px;
-    margin-bottom: 14px;
 }
 
-.aside .search-image-form {
+.aside .search-image-form
+{
     white-space: nowrap;
 }
 
-.aside .search-image-input {
-    height: 30px;
+.aside .search-image-input
+{
+    display: block;
+
     width: 160px;
-    border-radius: 24px;
-    border: 1px solid #4b5368;
-    padding-left: 9px;
-    background-image: url("search-icon-white.png");
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: 150px 50%;
-    background-color: black;
-    color: white;
+    height: 30px;
+    margin-top: 14px;
+    margin-right: auto;
+    margin-bottom: 14px;
+    margin-left: auto;
     padding-top: 0;
     padding-bottom: 0;
-    margin-top: 14px;
-    margin-left: auto;
-    margin-bottom: 14px;
-    margin-right: auto;
-    display: block;
+    padding-left: 9px;
+
+    color: white;
+    border: 1px solid #4b5368;
+    border-radius: 24px;
+    background-color: black;
+    background-image: url('../img/search-icon-white.png');
+    background-repeat: no-repeat;
+    background-position: 150px 50%;
+    background-size: 16px 16px;
 }
 
-::-webkit-input-placeholder {
-   color: #8c97b2;
+::-webkit-input-placeholder
+{
+    color: #8c97b2;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: #8c97b2;
+:-moz-placeholder
+{
+    /* Firefox 18- */
+    color: #8c97b2;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #8c97b2;
+::-moz-placeholder
+{
+    /* Firefox 19+ */
+    color: #8c97b2;
 }
 
-:-ms-input-placeholder {
-   color: #8c97b2;
+:-ms-input-placeholder
+{
+    color: #8c97b2;
 }
 
-input[type="radio"] {
-    display:none;
+input[type='radio']
+{
+    display: none;
 }
 
 
-input[type="radio"] + label {
+input[type='radio'] + label
+{
     margin-left: 35px;
 }
 
-input[type="radio"] + label span {
+input[type='radio'] + label span
+{
     display: inline-block;
+
     width: 6px;
     height: 6px;
     margin: -1px 8px 0 0;
-    vertical-align: middle;
-    background-color: black;
+
     cursor: pointer;
-    border-radius:  50%;
+    vertical-align: middle;
+
+    border-radius: 50%;
+    background-color: black;
 }
 
-input[type="radio"]:checked + label span {
+input[type='radio']:checked + label span
+{
     background-color: #4acec4;
 }
